@@ -1,0 +1,3 @@
+//git ignore files tell the git what not to add into the repo
+
+.env 

@@ -1,0 +1,15 @@
+this is the first file to practice git.
+
+git branch -- shows branches
+git branch branch2 -- created a new branch that is branch2
+git switch branch2 -- head points to branch2
+git switch -c dark-mode  -- creates and switch to that command only
+git checkout orange-mode -- used to create a branch
+
+git merge branch2 -- merges the content
+git merge --abort -- to abort conflicting merge
+
+git branch -m branch2 dark-mode -- used to rename branch
+
+git branch -d branch2 -- used to delete a branch
+
