@@ -1,0 +1,20 @@
+this is 2nd file to practice git
+
+done with:  git init
+            git add filename OR git add .
+            git status
+            git commit -m "first commit"
+
+            git log
+            git log --oneline
+
+            
+            git config --global user.email "arpatel@trueigtech.com" // used to identify user
+            git config --global user.name "Aryan"
+
+            about .env file
+            .gitignore
+            .gitkeep
+
+            git remote add MODULE_TRAINING <URL>
+            
