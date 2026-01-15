@@ -1,0 +1,154 @@
+document.getElementById('title')
+<h1 id=​"title" class=​"heading">​DOM learning​</h1>​
+
+document.getElementById('title').id
+'title'
+
+document.getElementById('title').class
+undefined
+
+document.getElementById('title').className
+'heading'
+
+document.getElementById('title').getAttribute('id')
+'title'
+
+document.getElementById('title').setAttribute('class', 'test' )
+
+document.getElementById('title').setAttribute('class', 'test')
+
+const title = document.getElementById('title')
+
+title
+<h1 id=​"title" class=​"test">​DOM learning​</h1>​
+title.style.backgroundColor = 'green'
+'green'
+
+title.style.padding = '150px'
+'150px'
+
+title.style.padding = '15px'
+'15px'
+
+title.style.borderRadius = '15px'
+'15px'
+
+title.textContent
+'DOM learning'
+
+title.innerHTML
+--'DOM learning'
+
+title.innerText
+--'DOM learning'
+
+document.querySelector('h1')                 //[QUERYSELECTOR ONLY SELECTS FIRST ITEM]
+<h1 id=​"title" class=​"test" style=​"background-color:​ green;​ padding:​ 15px;​ border-radius:​ 15px;​">​DOM learning​</h1>​
+document.querySelector('#title')
+<h1 id=​"title" class=​"test" style=​"background-color:​ green;​ padding:​ 15px;​ border-radius:​ 15px;​">​DOM learning​</h1>​
+document.querySelector('.heading')
+null
+document.querySelector('.test')
+<h1 id=​"title" class=​"test" style=​"background-color:​ green;​ padding:​ 15px;​ border-radius:​ 15px;​">​DOM learning​</h1>​
+.
+
+document.querySelector('input[type="password"]')
+<input type=​"password" name id>​
+
+
+document.querySelector('ul')
+<ul>​…​</ul>​
+const myul = document.querySelector('ul')
+undefined
+myul.querySelector('li')
+<li>​…​</li>​
+const turngreen = myul.querySelector('li')
+undefined
+turngreen.style.backgroundColor = "green"
+'green'
+turngreen.style.padding = "10px"
+'10px'
+turngreen.innerText = "first"
+'first'
+
+document.querySelector('ul')
+<ul>​…​</ul>​
+const myul = document.querySelector('ul')
+undefined
+myul.querySelector('li')
+<li>​…​</li>​
+const turngreen = myul.querySelector('li')
+undefined
+turngreen.style.backgroundColor = "green"
+'green'
+turngreen.style.padding = "10px"
+'10px'
+turngreen.innerText = "first"
+'first'
+document.querySelectorAll('li')
+NodeList(3) [li, li, li]0: li1: li2: lilength: 3[[Prototype]]: NodeListentries: ƒ entries()forEach: ƒ forEach()length: 1name: "forEach"arguments: (...)caller: (...)[[Prototype]]: ƒ ()[[Scopes]]: Scopes[0]item: ƒ item()length: 1name: "item"arguments: (...)caller: (...)[[Prototype]]: ƒ ()[[Scopes]]: Scopes[0]keys: ƒ keys()length: (...)values: ƒ values()constructor: ƒ NodeList()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "NodeList"get length: ƒ length()[[Prototype]]: Object
+const tempList = document.querySelectorAll('li')
+undefined
+tempLi
+VM3414:1 Uncaught ReferenceError: tempLi is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM3414:1Understand this error
+tempList.style.backgroundColor = "green"
+VM3507:1 Uncaught TypeError: Cannot set properties of undefined (setting 'backgroundColor')
+    at <anonymous>:1:32
+(anonymous) @ VM3507:1Understand this error
+templist.foreach((l) => {}
+VM3572:1 Uncaught SyntaxError: missing ) after argument listUnderstand this error
+templist.foreach((l) => {
+    l.style.backgroundColor = "green"
+}
+VM3623:3 Uncaught SyntaxError: missing ) after argument listUnderstand this error
+templist.foreach((l) => {
+    l.style.backgroundColor = "green"
+})
+VM3636:1 Uncaught ReferenceError: templist is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM3636:1Understand this error
+tempList.foreach((l) => {
+    l.style.backgroundColor = "green"
+})
+VM3648:1 Uncaught TypeError: tempList.foreach is not a function
+    at <anonymous>:1:10
+(anonymous) @ VM3648:1Understand this error
+tempList.foreach( function (l) => {
+    l.style.backgroundColor = "green"
+})
+VM3672:1 Uncaught SyntaxError: Unexpected token '=>'Understand this error
+tempList.foreach( function (l){
+    l.style.backgroundColor = "green"
+})
+VM3680:1 Uncaught TypeError: tempList.foreach is not a function
+    at <anonymous>:1:10
+(anonymous) @ VM3680:1Understand this error
+tempList.forEach((l) => {
+    l.style.backgroundColor = "green"
+})
+undefined
+
+
+document.getElementsByClassName('list-item')
+HTMLCollection(4) [li.list-item, li.list-item, li.list-item, li.list-item]0: li.list-itemaccessKey: ""ariaActiveDescendantElement: nullariaAtomic: nullariaAutoComplete: nullariaBrailleLabel: nullariaBrailleRoleDescription: nullariaBusy: nullariaChecked: nullariaColCount: nullariaColIndex: nullariaColIndexText: nullariaColSpan: nullariaControlsElements: nullariaCurrent: nullariaDescribedByElements: nullariaDescription: nullariaDetailsElements: nullariaDisabled: nullariaErrorMessageElements: nullariaExpanded: nullariaFlowToElements: nullariaHasPopup: nullariaHidden: nullariaInvalid: nullariaKeyShortcuts: nullariaLabel: nullariaLabelledByElements: nullariaLevel: nullariaLive: nullariaModal: nullariaMultiLine: nullariaMultiSelectable: nullariaOrientation: nullariaPlaceholder: nullariaPosInSet: nullariaPressed: nullariaReadOnly: nullariaRelevant: nullariaRequired: nullariaRoleDescription: nullariaRowCount: nullariaRowIndex: nullariaRowIndexText: nullariaRowSpan: nullariaSelected: nullariaSetSize: nullariaSort: nullariaValueMax: nullariaValueMin: nullariaValueNow: nullariaValueText: nullassignedSlot: nullattributeStyleMap: StylePropertyMap {size: 0}attributes: NamedNodeMap {0: class, class: class, length: 1}autocapitalize: ""autofocus: falsebaseURI: "file:///C:/ARYAN_PERSONAL/TRUEiGTECH/TRAINING/CODES/MODULE_TRAIN/MODULE_JS/07_DOM/one.html"childElementCount: 0childNodes: NodeList [text]children: HTMLCollection []classList: DOMTokenList ['list-item', value: 'list-item']className: "list-item"clientHeight: 18clientLeft: 0clientTop: 0clientWidth: 156contentEditable: "inherit"currentCSSZoom: 1dataset: DOMStringMap {}dir: ""draggable: falseeditContext: nullelementTiming: ""enterKeyHint: ""firstChild: textfirstElementChild: nullhidden: falseid: ""inert: falseinnerHTML: "one"innerText: "one"inputMode: ""isConnected: trueisContentEditable: falselang: ""lastChild: textlastElementChild: nulllocalName: "li"namespaceURI: "http://www.w3.org/1999/xhtml"nextElementSibling: li.list-itemnextSibling: textnodeName: "LI"nodeType: 1nodeValue: nullnonce: ""offsetHeight: 18offsetLeft: 48offsetParent: body.bg-blackoffsetTop: 564offsetWidth: 156onabort: nullonanimationend: nullonanimationiteration: nullonanimationstart: nullonauxclick: nullonbeforecopy: nullonbeforecut: nullonbeforeinput: nullonbeforematch: nullonbeforepaste: nullonbeforetoggle: nullonbeforexrselect: nullonblur: nulloncancel: nulloncanplay: nulloncanplaythrough: nullonchange: nullonclick: nullonclose: nulloncommand: nulloncontentvisibilityautostatechange: nulloncontextlost: nulloncontextmenu: nulloncontextrestored: nulloncopy: nulloncuechange: nulloncut: nullondblclick: nullondrag: nullondragend: nullondragenter: nullondragleave: nullondragover: nullondragstart: nullondrop: nullondurationchange: nullonemptied: nullonended: nullonerror: nullonfocus: nullonformdata: nullonfullscreenchange: nullonfullscreenerror: nullongotpointercapture: nulloninput: nulloninvalid: nullonkeydown: nullonkeypress: nullonkeyup: nullonload: nullonloadeddata: nullonloadedmetadata: nullonloadstart: nullonlostpointercapture: nullonmousedown: nullonmouseenter: nullonmouseleave: nullonmousemove: nullonmouseout: nullonmouseover: nullonmouseup: nullonmousewheel: nullonpaste: nullonpause: nullonplay: nullonplaying: nullonpointercancel: nullonpointerdown: nullonpointerenter: nullonpointerleave: nullonpointermove: nullonpointerout: nullonpointerover: nullonpointerrawupdate: nullonpointerup: nullonprogress: nullonratechange: nullonreset: nullonresize: nullonscroll: nullonscrollend: nullonscrollsnapchange: nullonscrollsnapchanging: nullonsearch: nullonsecuritypolicyviolation: nullonseeked: nullonseeking: nullonselect: nullonselectionchange: nullonselectstart: nullonslotchange: nullonstalled: nullonsubmit: nullonsuspend: nullontimeupdate: nullontoggle: nullontransitioncancel: nullontransitionend: nullontransitionrun: nullontransitionstart: nullonvolumechange: nullonwaiting: nullonwebkitanimationend: nullonwebkitanimationiteration: nullonwebkitanimationstart: nullonwebkitfullscreenchange: nullonwebkitfullscreenerror: nullonwebkittransitionend: nullonwheel: nullouterHTML: "<li class=\"list-item\">one</li>"outerText: "one"ownerDocument: documentparentElement: ulparentNode: ulpart: DOMTokenList [value: '']popover: nullprefix: nullpreviousElementSibling: nullpreviousSibling: textrole: nullscrollHeight: 18scrollLeft: 0scrollTop: 0scrollWidth: 156shadowRoot: nullslot: ""spellcheck: truestyle: CSSStyleDeclaration {accentColor: '', additiveSymbols: '', alignContent: '', alignItems: '', alignSelf: '', …}tabIndex: -1tagName: "LI"textContent: "one"title: ""translate: truetype: ""value: 0virtualKeyboardPolicy: ""writingSuggestions: "true"[[Prototype]]: HTMLLIElement(...)1: li.list-item2: li.list-item3: li.list-itemlength: 4[[Prototype]]: HTMLCollectionitem: ƒ item()length: (...)namedItem: ƒ namedItem()constructor: ƒ HTMLCollection()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "HTMLCollection"get length: ƒ length()[[Prototype]]: Object
+const tempClassList  = document.getElementsByClassName('list-item')
+undefined
+tempClassList.forEach( function(c) => {})
+VM3951:1 Uncaught SyntaxError: Unexpected token '=>'Understand this error
+tempClassList.forEach( function(c) => {
+    c.style.backgroundColor = "green"
+})
+VM3991:1 Uncaught SyntaxError: Unexpected token '=>'Understand this error
+Array.from(tempClassList)
+(4) [li.list-item, li.list-item, li.list-item, li.list-item]
+const myConvertedArray = Array.from(tempClassList)
+undefined
+myConvertedArray.forEach(function(li){})
+undefined
+myConvertedArray.forEach(function(li){
+    li.style.color = 'orange'
+})
+undefined
+
