@@ -53,39 +53,39 @@ const products = [
     },
 ]
 
-function addProduct(id1, name1, price1, stock1){
-    products.push({
-        id: id1,
-        name: name1,
-        price: price1,
-        stock: stock1,
-        isAvailable : (stock1 !=0 ? true : false) 
-        })
-}
+// function addProduct(id1, name1, price1, stock1){
+//     products.push({
+//         id: id1,
+//         name: name1,
+//         price: price1,
+//         stock: stock1,
+//         isAvailable : (stock1 !=0 ? true : false) 
+//         })
+// }
 
-console.log(products)
-addProduct(6, "Phone", 799, 0)
-console.log(products)
+// console.log(products)
+// addProduct(6, "Phone", 799, 0)
+// console.log(products)
 
-const getAvailableProducts = () => {
-    for(const product of products)
-        if(product.isAvailable){
-            console.log(product)
-        }
-}
-getAvailableProducts()
+// const getAvailableProducts = () => {
+//     for(const product of products)
+//         if(product.isAvailable){
+//             console.log(product)
+//         }
+// }
+// getAvailableProducts()
 
-function findProductByName(name){
-    for(const product of products){
-        if(product.name == name){
-                console.log("Product Found !")
-                return
-        }        
-    }    
-        console.log("Product not Found !")    
+// function findProductByName(name){
+//     for(const product of products){
+//         if(product.name == name){
+//                 console.log("Product Found !")
+//                 return
+//         }        
+//     }    
+//         console.log("Product not Found !")    
 
-}
-findProductByName("watch")
+// }
+// findProductByName("")
 
 function printProductList(){
     let temp = null
