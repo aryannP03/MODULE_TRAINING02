@@ -89,7 +89,7 @@ const products = [
 
 function printProductList(){
     let temp = null
-    for(const product of products){
+    for(const product of products){         //here .foreach() function can also be used
 
         if(product.isAvailable)
             temp = "inStock"
