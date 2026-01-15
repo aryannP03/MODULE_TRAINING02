@@ -13,3 +13,4 @@ git reflog --- used to reflog
 used to go back in commits
 git reset --hard <commitID>
 
+git remote -v --- it is used to check remote repo linked and their name
