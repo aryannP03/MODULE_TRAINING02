@@ -1,0 +1,15 @@
+//rebase ----
+changing the base of a branch to most recent main branch or any other branch is rebase is basic terms.
+
+git rebase master --- !NOTE don't do rebase while in main branch, 
+                        should be in the branch where need to rebase
+
+//reflog ---
+used to get complete history of commits.
+
+git reflog --- used to reflog
+
+// reset hard ---
+used to go back in commits
+git reset --hard <commitID>
+
