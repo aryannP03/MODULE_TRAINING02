@@ -13,3 +13,8 @@ git branch -m branch2 dark-mode -- used to rename branch
 
 git branch -d branch2 -- used to delete a branch
 
+git diff -- does comparison btw two entites
+git diff --staged --- describes the comparison btw staging area
+git diff <branch1>..<branch2>  --- does comparison b'w two branches
+
+
