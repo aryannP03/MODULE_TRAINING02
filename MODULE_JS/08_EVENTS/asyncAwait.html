@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello aryan</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayAryan = function(){     
+        console.log("Aryan")
+    }
+    
+    setTimeout(sayAryan, 2000)  //called timeout function with exection in 2 sec    timeOut fucn - //function to be executed one time after defined time
+
+    //there is also setInterval , where it needs breakpoint and do that work in loop.
+    const changeText = function() {
+        document.querySelector('h1').
+        innerHTML = "changed text"
+    }
+
+    const changeTextfun = setTimeout(changeText, 2000)
+
+    document.querySelector('#stop').addEventListener('click', function() {
+        clearTimeout(changeTextfun)                 //to stop event
+        console.log("change text stopped");
+    })  
+</script>
+</html>
