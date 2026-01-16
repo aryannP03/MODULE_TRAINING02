@@ -19,7 +19,12 @@ for(greet of greetings){
 
 const map = new Map()
 map.set('IN', "India")
-map.set('USA', ")
-map.set('IN', "India")
-map.set('IN', "India")
-map.set('IN', "India")
+map.set('USA', "United states of america")
+map.set('UAE', "United arab")
+
+//looping through map
+
+for(const [key, value] of map){
+    console.log(key, ':-', value);
+}
+

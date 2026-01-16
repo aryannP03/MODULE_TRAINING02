@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTER APP</title>
+</head>
+<style>
+    .bg-black{
+        background-color: #212121;
+        color: #fff;
+        text-align: center;
+    }
+</style>
+<body class ="bg-black">
+    <h1>COUNTER APP : </h1>
+
+    <H2 id="count">0</H2>
+
+    <button id = "btnInc">INCREASE</button>
+    <button id = "btnDec">DECREASE</button>
+    <button id = "btnRst">RESET</button>
+</body>
+<script>
+    let count = document.querySelector('#count')
+    let incBtn = document.querySelector('#btnInc')
+    let decBtn = document.querySelector('#btnDec')
+    let resBtn = document.querySelector('#btnRst')
+
+    // console.log(`count :`, count);
+    let countVal = 0
+    console.log(`count val :`, countVal);
+    
+    //function to increase count
+    incBtn.addEventListener("click", () => {
+        countVal++;
+        console.log(`Count value increased`, countVal);
+        updateCount(countVal)
+        
+    })
+    decBtn.addEventListener("click", () => {
+        if(countVal === 0){
+            updateCount(0)
+            return
+        }
+        countVal--;
+        console.log(`Count value decreased`, countVal);
+        updateCount(countVal)
+        
+    })
+    resBtn.addEventListener("click", () => {
+        countVal = 0
+        console.log(`Count value reset to :`, countVal);
+        updateCount(countVal)
+        
+    })
+
+    //to update count value
+    function updateCount(countVal){
+        count.textContent = countVal
+    }
+    
+    
+</script>
+</html>
