@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NOTE TAKER</title>
+</head>
+<style>
+    .bg-black{
+        background-color: #212121;
+        text-align: center;
+        color: aliceblue;
+
+    }
+
+    input {
+        background: #111;
+        color: #fff;
+        border: 1px solid #333;
+        padding: 10px 12px;
+        border-radius: 6px;
+        font-size: 14px;
+        outline: none;
+        width: 250px;
+    }
+</style>
+<body class="bg-black">
+    <h1>NOTE TAKING APP</h1>
+    <form id="takenoteDiv">
+        <div id = "notebox" >
+            <input type="text" placeholder="Add notes" id='inputText'>
+        </div>
+        <button id="addNote">ADD A NOTE</button>
+    </form>
+</body>
+<script type="module">
+    import {saveNote} from "./dataFetch.js"
+    import noteStore from "./notesStore.js"
+
+    const addNoteBtn = document.querySelector('#addNote')
+    const takenoteDiv = document.querySelector('#takenoteDiv')
+    const input = document.querySelector('#inputText')
+
+    takenoteDiv.addEventListener("submit", async (e) => {
+        e.preventDefault()
+        console.log(input.value);
+
+        if(input.value.trim() == "") return
+
+        await saveNote(input.value)
+
+        const notes = noteStore.getAll()
+        console.log(notes);
+        
+    })
+</script>
+</html>
