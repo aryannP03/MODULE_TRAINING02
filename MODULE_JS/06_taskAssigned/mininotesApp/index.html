@@ -58,8 +58,11 @@
         console.log(notes);
 
         const noteBox = document.createElement('div')
-        noteBox.innerText = notes
+        noteBox.innerText = notes[notes.length - 1]
         notesContainer.appendChild(noteBox)
+
+
+    
     })
 </script>
 </html>

@@ -10,7 +10,7 @@
     }
 
     getAll(){
-        return [...this.#notes]
+        return [...this.#notes]     //we are returing a copy of the array to maintain security
     }
 }
 
