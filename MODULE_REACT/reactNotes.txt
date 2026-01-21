@@ -1,0 +1,12 @@
+//To Create a react + vite project 
+=>npm create vite@latest <project name> 
+
+//to create react project only with react
+=>create-react-app <project-name>
+
+//to install node modules in folder
+=>npm install OR npm in
+
+
+
+

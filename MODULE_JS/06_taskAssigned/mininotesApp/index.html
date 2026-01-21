@@ -32,26 +32,37 @@
         </div>
         <button id="addNote">ADD A NOTE</button>
     </form>
+
+    <div id="notesContainer"></div>
 </body>
 <script type="module">
     import {saveNote} from "./dataFetch.js"
     import noteStore from "./notesStore.js"
 
-    const addNoteBtn = document.querySelector('#addNote')
     const takenoteDiv = document.querySelector('#takenoteDiv')
     const input = document.querySelector('#inputText')
+    const notesContainer = document.querySelector('#notesContainer')
 
     takenoteDiv.addEventListener("submit", async (e) => {
         e.preventDefault()
-        console.log(input.value);
-
-        if(input.value.trim() == "") return
-
+        
+        if(input.value.trim() == ""){
+            console.log("Please enter a valid value");
+            return  
+        } 
+        
         await saveNote(input.value)
+        input.value = ""
 
         const notes = noteStore.getAll()
         console.log(notes);
-        
+
+        const noteBox = document.createElement('div')
+        noteBox.innerText = notes[notes.length - 1]
+        notesContainer.appendChild(noteBox)
+
+
+    
     })
 </script>
 </html>

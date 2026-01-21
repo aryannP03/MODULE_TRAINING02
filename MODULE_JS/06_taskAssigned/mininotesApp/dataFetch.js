@@ -10,6 +10,9 @@ export async function saveNote(data) {
                 
             }, 1000)
             })
+        }else{
+            console.log("please enter some value !");
+            
         }
         
 }
